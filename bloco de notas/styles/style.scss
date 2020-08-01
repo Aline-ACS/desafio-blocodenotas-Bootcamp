@@ -1,0 +1,110 @@
+//variáveis SASS
+
+$bg-preto: #24272a;
+$roxo-claro: #ae8be0;
+$azul-claro:rgb(104, 232, 234);
+$padrao: white;
+
+@mixin fonts($size, $weight) {
+    font-family: Arial, Helvetica, "sans-serif";
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
+/* layout CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.bg-body {
+    background-image: linear-gradient(to right, rgb(49, 44, 44), $roxo-claro, rgb(93, 72, 75));
+}
+
+.cadastrar {
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+  
+h4 {
+    @include fonts(1.3rem, 900);
+}
+
+.bg-preto {
+    background-color: $bg-preto;
+}
+
+.inputs {
+    width: 300px;
+    height: 250px;
+    border-radius: 0.5em;
+}
+
+.texto-input {
+    padding: 2px;
+    width: 180px;
+    border: 0.8px solid $roxo-claro;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    margin: 8px auto;
+    display: block;
+    text-align: center;
+    @include fonts(15px, 600);
+    &:focus {
+        box-shadow: 0 0 10px $azul-claro;
+        width: 210px; 
+    }
+}
+
+.card-footer {
+    padding: 0.5rem 1.0rem;
+    background-color: rgba($bg-preto, 0.03);
+    border-top: 1px solid rgba($bg-preto, 0.125);
+}
+
+.btnBloco {
+    border-radius: 8px;
+	display: block;
+	height: 50px;
+    outline: none;
+    margin-top: 10px;
+    padding: 15px;
+    color: $bg-preto;
+    background-color: $padrao;
+    border-color: $bg-preto;
+    @include fonts(15px, 600);
+    &:hover {
+        color: $padrao;
+        background-color: $bg-preto;
+        border-color: $padrao;
+    }
+}
+
+#mostrarNotas {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.notasAdicionadas {
+    padding: 5px;
+}
+
+.border {
+    border: 2px solid $padrao;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

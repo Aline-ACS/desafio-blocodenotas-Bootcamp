@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafio Bloco de Notas </title>
+    <link type="text/css" rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../imagens/clipboard.svg"> 
+</head>
+
+<body class="bg-body">
+
+    <section class="cadastrar"> <!-- cadastrar -->
+       
+        <div class="container">
+            <h4> Insira suas notas </h4>
+            <div class="card text-white inputs">
+                <div class="card-body bg-preto">
+                    <input type="text" placeholder="Título" id="titulo" class="texto-input">
+                    <br>
+                    <input type="text" class="texto-input" id="conteudo" placeholder="Conteúdo"></input>
+                            
+                    <div class="card-footer">
+                        <input type="date" id="data" class="texto-input">
+                        <input type="time" id="hora" class="texto-input">
+                    </div>
+                </div>
+            </div>
+            <input type="button" value="Inserir" id="btnCadastrar" class="btnBloco font-weight-bold">
+            <br>
+            <input type="button" value="Mostrar Notas" id="btnMostrarNotas" class="btnBloco font-weight-bold">
+            <label id="quantidadeNotas" class="ml-3"></label>
+        </div>
+        
+    </section>
+
+    <section> <!--mostrar notas -->
+        <div class="container">
+            <div id="mostrarNotas"></div>        
+        </div> 
+    </section>
+
+    <script type="text/javaScript" src="../src/desafio_blocodenotas.js"></script>
+</body>
+</html>
